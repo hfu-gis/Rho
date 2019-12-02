@@ -52,7 +52,7 @@
               name="login"
               prepend-icon="mdi-account"
               type="text"
-              :value="user.familyName"
+              :value="user.name"
             />
 
             <v-text-field
@@ -77,13 +77,26 @@
 </template>
 
 <script>
-export default {
+  // const db = require('../db')
+
+  //import db from "../db";
+  const firestore = firebase.firestore()
+
+  export default {
+
   props: {
     source: String
   },
   data() {
     return {
-      user: {}
+      user: async () =>  {
+        let docRef =  firestore.collection('User').doc('testUser')
+        docRef.get().then(doc => {
+          return doc.data()
+        })
+
+
+      }
     }
   },
   methods: {
@@ -94,8 +107,9 @@ export default {
         })
     }
   },
-  created() {
-    this.user = require('../assets/data/profile')
+  mounted() {
+    this.user = firestore.collection('User').doc('testUser')
+
   }
 }
 </script>
