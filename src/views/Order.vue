@@ -75,7 +75,7 @@ export default {
   created() {
     db.collection('Products').get()
       .then(productsFromDB => {
-        productsFromDB.docs.forEach(doc => {
+        productsFromDB.forEach(doc => {
           this.products.push(doc.data())
         })
       })

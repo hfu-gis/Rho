@@ -23,7 +23,7 @@
               name="login"
               prepend-icon="mdi-account"
               type="text"
-              v-model="loginUser"
+              :value="loginUser.name"
             />
 
             <v-text-field
@@ -70,7 +70,7 @@ export default {
     }
   },
   created() {
-    let docRef = db.collection('User').doc('testUser')
+    let docRef = db.collection('User').doc( 'testUser')
     docRef.get().then(doc => {
       this.loginUser = doc.data()
     })
