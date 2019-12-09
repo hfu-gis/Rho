@@ -82,6 +82,7 @@ export default {
       .catch((err) => {
         console.log('Error getting documents', err)
       })
+
   }
 }
 </script>

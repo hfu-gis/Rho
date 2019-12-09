@@ -44,9 +44,13 @@
         <v-icon>mdi-cart</v-icon>
       </v-btn>
 
-      <v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
+      <!--<v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
         <v-icon>mdi-login</v-icon>
-      </v-btn>
+      </v-btn>-->
+          <v-btn icon :to="{name:'Registration'}">
+            <v-icon>mdi-account-plus</v-icon>
+          </v-btn>
+
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
     </v-app-bar>
 
