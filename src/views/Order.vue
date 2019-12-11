@@ -8,7 +8,7 @@
           gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
           height="140"
         >
-          <v-card-title v-text="item.title"/>
+          <v-card-title v-text="item.description"/>
         </v-img>
 
         <v-card-actions>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import db from '../db'
+
 export default {
 // gebt jeder Page einen eigenen Namen
   name: 'Order',
@@ -44,13 +46,7 @@ export default {
 // Variablen-Speicher
   data() {
     return {
-      products: [
-        {title:'Tropfen'},
-        {title:'Verdampfer'},
-        {title:'Cookies'},
-        {title:'Tee'},
-        {title:'Pulver'}
-      ],
+      products: [],
       name: {
         type: String
       },
@@ -66,7 +62,7 @@ export default {
 // interne Methoden
   methods: {
     addToCatolog(id) {
-      let docRef = db.collection('products').doc(id)
+      let docRef = db.collection('Products').doc(id)
       docRef.set({
         name: this.name,
         price: this.price
@@ -77,13 +73,16 @@ export default {
 
 // Initialisierung
   created() {
-    db.collection('products')
-      .then((productsFromDB) => {
-        this.products = productsFromDB
+    db.collection('Products').get()
+      .then(productsFromDB => {
+        productsFromDB.forEach(doc => {
+          this.products.push(doc.data())
+        })
       })
       .catch((err) => {
         console.log('Error getting documents', err)
       })
+
   }
 }
 </script>

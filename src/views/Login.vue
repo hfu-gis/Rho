@@ -15,35 +15,6 @@
           flat
         >
           <v-toolbar-title>Login</v-toolbar-title>
-          <v-spacer/>
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                :href="source"
-                icon
-                large
-                target="_blank"
-                v-on="on"
-              >
-                <v-icon>mdi-code-tags</v-icon>
-              </v-btn>
-            </template>
-            <span>Source</span>
-          </v-tooltip>
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                large
-                href="https://codepen.io/johnjleider/pen/pMvGQO"
-                target="_blank"
-                v-on="on"
-              >
-                <v-icon>mdi-codepen</v-icon>
-              </v-btn>
-            </template>
-            <span>Codepen</span>
-          </v-tooltip>
         </v-toolbar>
         <v-card-text>
           <v-form>
@@ -52,7 +23,7 @@
               name="login"
               prepend-icon="mdi-account"
               type="text"
-              :value="user.familyName"
+              :value="loginUser.name"
             />
 
             <v-text-field
@@ -77,25 +48,32 @@
 </template>
 
 <script>
+import db from '../db'
+
 export default {
-  props: {
-    source: String
-  },
+  props: {},
   data() {
     return {
-      user: {}
+      loginUser: {
+        name:''
+      }
     }
   },
   methods: {
     login() {
+  /*
       db.connect()
         .then(()=>{
           this.$emit('login', true)
         })
+  */
     }
   },
   created() {
-    this.user = require('../assets/data/profile')
+    let docRef = db.collection('User').doc( 'testUser')
+    docRef.get().then(doc => {
+      this.loginUser = doc.data()
+    })
   }
 }
 </script>

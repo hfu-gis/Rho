@@ -4,6 +4,7 @@ import Login from '../views/Login'
 import Order from '../views/Order'
 import Overview from '../views/Overview'
 import App from '../App'
+import Registration from "../views/Registration";
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ export default new VueRouter({
             path: '/login',
             name: 'Login',
             component: Login
+        },
+        {
+            path: '/register',
+            name: 'Registration',
+            component: Registration
         },
         {
             path: '/order',
