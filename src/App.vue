@@ -6,12 +6,12 @@
       right
     >
       <v-list dense>
-        <v-list-item link :to="{name:'Overview'}">
+        <v-list-item link :to="{name:'Template'}">
           <v-list-item-action>
             <v-icon>mdi-spa</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Overview</v-list-item-title>
+            <v-list-item-title>Template</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link :to="{name:'Order'}">
@@ -33,16 +33,9 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app right dark
-       src="http://picsum.photos/1920/100?blur">
-      <v-toolbar-title>Gras-Shoppers</v-toolbar-title>
+    <v-app-bar app right dark>
+      <v-toolbar-title>smart calendar</v-toolbar-title>
       <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon :to="{name:'Order'}">
-        <v-icon>mdi-cart</v-icon>
-      </v-btn>
 
       <!--<v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
         <v-icon>mdi-login</v-icon>
@@ -61,7 +54,7 @@
     </v-content>
 
     <v-footer app>
-      <span>&copy; 2019</span>
+      <span>RHO&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -87,7 +80,7 @@ export default {
   methods: {
   },
   created() {
-    this.$router.push({name: 'Overview'})
+    this.$router.push({name: 'Template'})
   }
 }
 </script>

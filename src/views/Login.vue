@@ -38,7 +38,7 @@
         <v-card-actions>
           <v-spacer/>
           <v-btn color="primary"
-             @click="$emit('login', true); $router.push({name:'Overview'})">
+             @click="$emit('login', true); $router.push({name:'Template'})">
             Login
           </v-btn>
         </v-card-actions>

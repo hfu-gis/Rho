@@ -15,7 +15,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item link :to="{name:'Overview'}">
+        <v-list-item link :to="{name:'Template'}">
           <v-list-item-action>
             <v-icon>mdi-cart</v-icon>
           </v-list-item-action>
@@ -40,7 +40,7 @@
       app
       color="cyan"
       dark
-      src="http://picsum.photos/1920/200?blur"
+
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -75,7 +75,7 @@
     >
       <v-spacer />
 
-      <span class="white--text">&copy; 2019</span>
+      <span class="white--text">&copy; RHO2019</span>
     </v-footer>
   </v-app>
 </template>

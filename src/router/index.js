@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login'
-import Order from '../views/Order'
 import Overview from '../views/Overview'
 import App from '../App'
 import Registration from "../views/Registration";
+
+
 
 Vue.use(VueRouter)
 
@@ -16,8 +17,8 @@ export default new VueRouter({
             component: App
         },
         {
-            path: '/overview',
-            name: 'Overview',
+            path: '/template',
+            name: 'Template',
             component: Overview
         },
         {
@@ -30,10 +31,6 @@ export default new VueRouter({
             name: 'Registration',
             component: Registration
         },
-        {
-            path: '/order',
-            name: 'Order',
-            component: Order
-        },
+
     ]
 })
