@@ -8,18 +8,18 @@
       <v-list dense>
         <v-list-item link :to="{name:'Template'}">
           <v-list-item-action>
-            <v-icon>mdi-spa</v-icon>
+            <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Template</v-list-item-title>
+            <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link :to="{name:'Order'}">
+        <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-cart</v-icon>
+            <v-icon>mdi-plus</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Order</v-list-item-title>
+            <v-list-item-title>Features</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -27,7 +27,7 @@
             <v-icon>mdi-settings</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Country</v-list-item-title>
+            <v-list-item-title>Settings</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
