@@ -1,16 +1,9 @@
 <template>
   <v-form ref="form" v-model="valid">
     <v-row v-if="success" align="center" justify="center">
-      <v-card elevation="10">
-        <v-img src="http://picsum.photos/200"
-               class="white--text align-end"
-               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-        >
           <v-card-title v-text>Registration<br/>successful</v-card-title>
-        </v-img>
-      </v-card>
     </v-row>
-    <v-row v-else align="top" justify="center">
+    <v-row v-else align="center" justify="center">
       <v-col cols="12" md="6">
         <v-text-field label="Nickname" v-model="userData.nickName" required maxlength="25"
                       :disabled="this.userData.isAlreadyRegistered"
@@ -108,3 +101,4 @@ export default {
   }
 }
 </script>
+
