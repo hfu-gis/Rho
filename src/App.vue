@@ -3,7 +3,6 @@
     <v-navigation-drawer
       v-model="drawer"
       app dark
-      right
     >
       <v-list dense>
         <v-list-item link :to="{name:'Overview'}">
@@ -37,12 +36,13 @@
       <v-toolbar-title>smart calendar</v-toolbar-title>
       <v-spacer />
 
-      <!--<v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
-        <v-icon>mdi-login</v-icon>
-      </v-btn>-->
-          <v-btn icon :to="{name:'Registration'}">
+      <v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+
+        <!--  <v-btn icon :to="{name:'Registration'}">
             <v-icon>mdi-account-plus</v-icon>
-          </v-btn>
+          </v-btn> -->
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
     </v-app-bar>
@@ -84,3 +84,4 @@ export default {
   }
 }
 </script>
+

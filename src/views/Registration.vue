@@ -1,13 +1,13 @@
 <template>
   <v-form ref="form" v-model="valid">
     <v-row v-if="success" align="center" justify="center">
-      <v-card elevation="10"
-
-      >
+      <v-card elevation="10">
+        <v-img src="http://picsum.photos/200"
+               class="white--text align-end"
+               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+        >
           <v-card-title v-text>Registration<br/>successful</v-card-title>
-<v-card-actions>
-  <v-btn text :to="{name:'Overview'}">Home</v-btn>
-</v-card-actions>
+        </v-img>
       </v-card>
     </v-row>
     <v-row v-else align="top" justify="center">

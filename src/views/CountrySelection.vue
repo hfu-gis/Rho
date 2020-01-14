@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: "CountrySelection"
+        "name": "CountrySelection"
     }
 </script>
 
