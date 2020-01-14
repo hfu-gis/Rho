@@ -6,7 +6,7 @@
       right
     >
       <v-list dense>
-        <v-list-item link :to="{name:'Template'}">
+        <v-list-item link :to="{name:'Overview'}">
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -80,7 +80,7 @@ export default {
   methods: {
   },
   created() {
-    this.$router.push({name: 'Template'})
+    this.$router.push({name: 'Overview'})
   }
 }
 </script>

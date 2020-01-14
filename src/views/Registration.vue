@@ -6,7 +6,7 @@
       >
           <v-card-title v-text>Registration<br/>successful</v-card-title>
 <v-card-actions>
-  <v-btn text :to="{name:'Template'}">Home</v-btn>
+  <v-btn text :to="{name:'Overview'}">Home</v-btn>
 </v-card-actions>
       </v-card>
     </v-row>

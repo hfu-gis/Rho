@@ -15,7 +15,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item link :to="{name:'Template'}">
+        <v-list-item link :to="{name:'Overview'}">
           <v-list-item-action>
             <v-icon>mdi-cart</v-icon>
           </v-list-item-action>

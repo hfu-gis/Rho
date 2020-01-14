@@ -7,6 +7,7 @@ import Registration from "../views/Registration";
 
 
 
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -17,8 +18,8 @@ export default new VueRouter({
             component: App
         },
         {
-            path: '/template',
-            name: 'Template',
+            path: '/overview',
+            name: 'Overview',
             component: Overview
         },
         {
@@ -31,6 +32,5 @@ export default new VueRouter({
             name: 'Registration',
             component: Registration
         },
-
     ]
 })
